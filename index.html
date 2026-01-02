@@ -3,77 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sai Rahul | Portfolio</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-    body { background: #0f0f0f; color: #fff; }
-    header { padding: 40px; display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 22px; font-weight: bold; color: #ff4d4d; }
-    nav a { margin-left: 20px; color: #ccc; text-decoration: none; }
-    nav a:hover { color: white; }
+  <title>Who’s Watching?</title>
 
-    .hero { padding: 80px 40px; max-width: 1100px; margin: auto; }
-    .hero h1 { font-size: 48px; margin-bottom: 20px; }
-    .hero p { font-size: 18px; color: #aaa; max-width: 700px; }
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    .buttons { margin-top: 30px; }
-    .btn { padding: 12px 20px; margin-right: 15px; border-radius: 6px; text-decoration: none; }
-    .primary { background: #ff4d4d; color: white; }
-    .secondary { border: 1px solid #555; color: white; }
-
-    .projects { padding: 60px 40px; max-width: 1100px; margin: auto; }
-    .projects h2 { margin-bottom: 30px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card { background: #1a1a1a; padding: 20px; border-radius: 10px; transition: 0.3s; }
-    .card:hover { transform: translateY(-5px); }
-
-    footer { text-align: center; padding: 30px; color: #666; }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <div class="logo">SAI RAHUL</div>
-  <nav>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <div class="container">
+    <h1>Who’s watching?</h1>
 
-<section class="hero">
-  <h1>Building scalable, high‑performance backend systems.</h1>
-  <p>
-    I'm Sai Rahul, a backend-focused software engineer experienced in Java, Spring Boot, AWS,
-    Kafka, Redis, and system design. I love building reliable, production‑ready applications.
-  </p>
+    <div class="profiles">
+      <!-- Recruiter -->
+      <div class="profile active" onclick="goToRecruiter()">
+        <div class="icon">👔</div>
+        <p>Recruiter</p>
+      </div>
 
-  <div class="buttons">
-    <a class="btn primary" href="#projects">View Projects</a>
-    <a class="btn secondary" href="#">Resume</a>
-  </div>
-</section>
-
-<section class="projects" id="projects">
-  <h2>Selected Projects</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Kafka-based Ride Booking</h3>
-      <p>Event-driven architecture using Kafka, Redis, and Spring Boot.</p>
-    </div>
-    <div class="card">
-      <h3>Document Management System</h3>
-      <p>Secure file storage and workflow automation using AWS services.</p>
-    </div>
-    <div class="card">
-      <h3>Alexa Timers Service</h3>
-      <p>Worked on scalable microservices used across Amazon devices.</p>
+      <!-- Anonymous -->
+      <div class="profile disabled">
+        <div class="icon">🔒</div>
+        <p>Anonymous</p>
+        <span>Coming soon</span>
+      </div>
     </div>
   </div>
-</section>
 
-<footer id="contact">
-  <p>© 2025 Sai Rahul Tanuku</p>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
